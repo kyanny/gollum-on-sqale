@@ -8,7 +8,7 @@ cd $HOME
 
 curl -LO https://github.com/github/gollum/archive/v$VERSION.tar.gz
 tar xzf v$VERSION.tar.gz -C $HOME/tmp
-rm $HOME/tmp/gollum-$VERSION/Gemfile $HOME/tmp/gollum-$VERSION/Gemfile.lock $HOME/tmp/gollum-$VERSION/config.ru
+rm $HOME/tmp/gollum-$VERSION/Gemfile
 cp -a $HOME/tmp/gollum-$VERSION/* $HOME/current/
 rm -rf $HOME/tmp/*
 
