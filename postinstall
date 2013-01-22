@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd $HOME
+curl -LO https://github.com/github/gollum/archive/v2.4.11.tar.gz
+tar xzf v2.4.11.tar.gz -C $HOME/tmp
+rm $HOME/tmp/Gemfile $HOME/tmp/Gemfile.lock $HOME/tmp/config.ru
+cp -a $HOME/tmp/* $HOME/current/
+rm -rf $HOME/tmp/*
+ln -s $HOME/current/lib/gollum/frontend/public/gollum $HOME/current/public
+
